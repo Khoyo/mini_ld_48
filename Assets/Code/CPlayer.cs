@@ -16,6 +16,7 @@ public class CPlayer : MonoBehaviour {
 	void Update () 
 	{
 		Move();
+		MoveHead();
 	}
 	
 	void Move()
@@ -45,8 +46,8 @@ public class CPlayer : MonoBehaviour {
 	
 	void MoveHead()
 	{
-		float fAngleY = gameObject.transform.rotation.eulerAngles.y * 2*3.14f/360.0f;
-		//gameObject.get
+		//float fAngleY = gameObject.transform.rotation.eulerAngles.y * 2*3.14f/360.0f;
+		gameObject.transform.FindChild("MainCamera").RotateAround(new Vector3(1,0,0), Time.deltaTime);//m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleY);
 	}
 
 }
