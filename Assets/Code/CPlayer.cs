@@ -5,11 +5,12 @@ public class CPlayer : MonoBehaviour {
 
 	float m_fVelocityWalk = 10.0f;
 	float m_fVelocityRotation = 0.5f;
+	float m_fAngleY;
 	
 	// Use this for initialization
 	void Start () 
 	{
-
+		m_fAngleY = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -41,13 +42,23 @@ public class CPlayer : MonoBehaviour {
 			gameObject.rigidbody.velocity = vel;
 		}
 		
-		gameObject.transform.RotateAround(new Vector3(0,1,0),m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleX);		
+		gameObject.transform.RotateAround(new Vector3(0,1,0),m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleX);	
 	}
 	
 	void MoveHead()
 	{
-		//float fAngleY = gameObject.transform.rotation.eulerAngles.y * 2*3.14f/360.0f;
-		//gameObject.transform.FindChild("MainCamera").RotateAround(new Vector3(1,0,0), Time.deltaTime);//m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleY);
+		float fAngleMax = -1.5f;
+		float fAngleMin = 1.5f;
+		float fAngleBeforeY = m_fAngleY;
+		
+		m_fAngleY += CApoilInput.InputPlayer.MouseAngleY;
+
+		if(m_fAngleY < fAngleMax)
+			m_fAngleY = fAngleMax;
+		if(m_fAngleY > fAngleMin)
+			m_fAngleY = fAngleMin;
+		
+		gameObject.transform.FindChild("MainCamera").RotateAroundLocal(new Vector3(1,0,0), m_fVelocityRotation * (m_fAngleY - fAngleBeforeY));
 	}
 
 }

@@ -41,7 +41,7 @@ public class CApoilInput
 		InputPlayer.MoveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);		
 		
 		InputPlayer.MouseAngleX = Input.GetAxis("Mouse X");
-		InputPlayer.MouseAngleY = Input.GetAxis("Mouse Y");
+		InputPlayer.MouseAngleY = -Input.GetAxis("Mouse Y");
 		
 		Quit = Input.GetKeyDown(KeyCode.Escape);
 		Restart = Input.GetKeyDown(KeyCode.R);
