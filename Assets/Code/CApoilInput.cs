@@ -27,7 +27,7 @@ public class CApoilInput
 	
 	public static void Init()
 	{
-		Screen.lockCursor = true;
+		//Screen.lockCursor = true;
 	}
 	
 	//-------------------------------------------------------------------------------
