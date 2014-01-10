@@ -47,7 +47,7 @@ public class CPlayer : MonoBehaviour {
 	void MoveHead()
 	{
 		//float fAngleY = gameObject.transform.rotation.eulerAngles.y * 2*3.14f/360.0f;
-		gameObject.transform.FindChild("MainCamera").RotateAround(new Vector3(1,0,0), Time.deltaTime);//m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleY);
+		//gameObject.transform.FindChild("MainCamera").RotateAround(new Vector3(1,0,0), Time.deltaTime);//m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleY);
 	}
 
 }
