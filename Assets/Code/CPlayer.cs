@@ -40,7 +40,13 @@ public class CPlayer : MonoBehaviour {
 			gameObject.rigidbody.velocity = vel;
 		}
 		
-		gameObject.transform.RotateAround(new Vector3(0,1,0),m_fVelocityRotation* CApoilInput.InputPlayer.MouseAngleX);		
+		gameObject.transform.RotateAround(new Vector3(0,1,0),m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleX);		
+	}
+	
+	void MoveHead()
+	{
+		float fAngleY = gameObject.transform.rotation.eulerAngles.y * 2*3.14f/360.0f;
+		//gameObject.get
 	}
 
 }
