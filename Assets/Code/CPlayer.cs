@@ -55,7 +55,7 @@ public class CPlayer : MonoBehaviour {
 
 		if(m_fAngleY < fAngleMax)
 			m_fAngleY = fAngleMax;
-		if(m_fAngleY > fAngleMin)
+		else if(m_fAngleY > fAngleMin)
 			m_fAngleY = fAngleMin;
 		
 		gameObject.transform.FindChild("MainCamera").RotateAroundLocal(new Vector3(1,0,0), m_fVelocityRotation * (m_fAngleY - fAngleBeforeY));
