@@ -2,10 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class CSoundEngine {
-	/*
+
 	//CGame game;
 	uint bankID;
-	bool mute;
+	bool mute = false;
 	
 	// Use this for initialization
 	public void Init() 
@@ -31,14 +31,15 @@ public class CSoundEngine {
 	}
 	
 	public void postEvent(string name, GameObject obj){
-			if(!mute)
-				AkSoundEngine.PostEvent(name, obj);
+		if(!mute)
+			AkSoundEngine.PostEvent(name, obj);
+		Debug.Log ("Posted "+name+" to sound engine");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-	*/
+
 
 }

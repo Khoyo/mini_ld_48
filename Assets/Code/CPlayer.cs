@@ -15,6 +15,7 @@ public class CPlayer : MonoBehaviour {
 		m_fAngleY = 0.0f;
 		m_Fer = gameObject.transform.FindChild("MainCamera").FindChild("Fer").GetComponent<CFerASouder>();
 		m_Hand = gameObject.transform.FindChild("MainCamera").FindChild("Hand").GetComponent<CHand>();
+
 	}
 	
 	// Update is called once per frame
