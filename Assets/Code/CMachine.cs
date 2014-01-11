@@ -12,7 +12,27 @@ public class CMachine : MonoBehaviour {
 	}
 	
 	void Update(){
-		//gameObject.renderer.material = m_bActivated ? m_matActivated : m_matDisabled;
+	}
+	
+	public void Enable(){
+		gameObject.renderer.material = m_matActivated;
+		m_bActivated = true;
+	}
+	
+	public void Disable(){
+		gameObject.renderer.material = m_matDisabled;
+		m_bActivated = false;
+	}
+	
+	public void OnMachineTriggerDown(){
+		if(m_bActivated)
+			Disable();
+		else
+			Enable();
+	}
+	
+	public void OnMachineTrigger(){
+		
 	}
 	
 }
