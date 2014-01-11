@@ -33,7 +33,7 @@ public class CSoundEngine {
 	public void postEvent(string name, GameObject obj){
 		if(!mute)
 			AkSoundEngine.PostEvent(name, obj);
-		Debug.Log ("Posted "+name+" to sound engine");
+		//Debug.Log ("Posted "+name+" to sound engine");
 	}
 	
 	// Update is called once per frame
