@@ -16,9 +16,12 @@ public class CMachineTrigger : MonoBehaviour {
 	
 	}
 	
-	void OnTriggerStay(){
+	void OnTriggerStay(Collider col){
+		if(col.gameObject.name != "Hand")
+			return;
+		Debug.Log ("WTF3");
 		timer = Time.time;
-		if(CApoilInput.InputPlayer.InteractHand){
+		if(CApoilInput.InputPlayer.InteractHand){Debug.Log ("WTF!!!");
 			SendMessageUpwards("OnMachineTrigger", SendMessageOptions.DontRequireReceiver);
 			if((timer-lastActivated)>0.05){
 				SendMessageUpwards("OnMachineTriggerDown", SendMessageOptions.DontRequireReceiver);
