@@ -18,6 +18,7 @@ public class CMenu : MonoBehaviour
 	float m_fTempsSplash;
 	float m_fTempsSplashInit = 2.0f;
 	float m_fTempsVideoIntro;
+	bool m_bLaunchGame;
 	
 	public Texture m_Texture_Fond;
 	public Texture m_Texture_Splash;
@@ -30,6 +31,7 @@ public class CMenu : MonoBehaviour
 		m_fTempsSplash = m_fTempsSplashInit;
 		m_EState = EmenuState.e_splash;
 		m_fTempsVideoIntro = 0.0f;
+		m_bLaunchGame = false;
 	}
 	
 	// Update is called once per frame
@@ -73,9 +75,10 @@ public class CMenu : MonoBehaviour
 				{
 					m_fTempsVideoIntro += Time.deltaTime;
 				}
-				else 
+				else if(!m_bLaunchGame)
 				{
 					Application.LoadLevel(Application.loadedLevel+1);
+					m_bLaunchGame = true;
 				}
 				
 				break;
