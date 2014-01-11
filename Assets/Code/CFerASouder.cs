@@ -15,7 +15,8 @@ public class CFerASouder : MonoBehaviour
 		m_Etincelle = gameObject.transform.FindChild("Etincelles").gameObject;
 		m_fTimerEtincelle = 0.0f;
 		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
-		StopFire();
+		m_Etincelle.SetActiveRecursively(false);
+		m_Etincelle.active = true;
 		m_bSoundLaunched = false;
 	}
 	
@@ -26,7 +27,7 @@ public class CFerASouder : MonoBehaviour
 		{
 			m_fTimerEtincelle -= Time.deltaTime;	
 		}
-		else
+		else if(m_bSoundLaunched)
 		{
 			StopFire();
 		}
