@@ -16,7 +16,7 @@ public class CMachineTrigger : MonoBehaviour {
 	
 	}
 	
-	void OnTriggerStay(){zzz
+	void OnTriggerStay(){
 		timer = Time.time;
 		if(CApoilInput.InputPlayer.InteractHand){
 			SendMessageUpwards("OnMachineTrigger", SendMessageOptions.DontRequireReceiver);
