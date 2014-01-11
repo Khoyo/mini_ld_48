@@ -5,7 +5,10 @@ public class CPlayer : MonoBehaviour {
 
 	float m_fVelocityWalk = 10.0f;
 	float m_fVelocityRotation = 0.5f;
+	float m_fVelocityJump = 250.0f;
 	float m_fAngleY;
+	float m_fTimerJump;
+	float m_fTimerJumpMax = 1.0f;
 	CFerASouder m_Fer;
 	CHand m_Hand;
 	
@@ -15,12 +18,15 @@ public class CPlayer : MonoBehaviour {
 		m_fAngleY = 0.0f;
 		m_Fer = gameObject.transform.FindChild("MainCamera").FindChild("Fer").GetComponent<CFerASouder>();
 		m_Hand = gameObject.transform.FindChild("MainCamera").FindChild("Hand").GetComponent<CHand>();
-
+		m_fTimerJump = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if(m_fTimerJump >= 0.0f)
+			m_fTimerJump -= Time.deltaTime;
+
 		Move();
 		MoveHead();
 		InputsPlayer();
@@ -31,6 +37,7 @@ public class CPlayer : MonoBehaviour {
 		float fAngleX = gameObject.transform.rotation.eulerAngles.y * 2*3.14f/360.0f;
 		Vector3 vForward = new Vector3(Mathf.Sin(fAngleX),0, Mathf.Cos(fAngleX));
 		Vector3 vRight = new Vector3(Mathf.Sin(fAngleX + 3.14f/2.0f),0, Mathf.Cos(fAngleX + 3.14f/2.0f));
+		Vector3 vUp = new Vector3(0,1,0);
 		
 		if(CApoilInput.InputPlayer.MoveForward)
 			gameObject.rigidbody.AddForce(m_fVelocityWalk*vForward);
@@ -48,7 +55,13 @@ public class CPlayer : MonoBehaviour {
 			gameObject.rigidbody.velocity = vel;
 		}
 		
-		gameObject.transform.RotateAround(new Vector3(0,1,0),m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleX);	
+		gameObject.transform.RotateAround(new Vector3(0,1,0),m_fVelocityRotation * CApoilInput.InputPlayer.MouseAngleX);
+
+		if(CApoilInput.InputPlayer.Jump && m_fTimerJump < 0.0f)
+		{
+			gameObject.rigidbody.AddForce(m_fVelocityJump*vUp);
+			m_fTimerJump = m_fTimerJumpMax;
+		}
 	}
 	
 	void MoveHead()
