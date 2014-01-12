@@ -22,7 +22,7 @@ public class CMachine : MonoBehaviour {
 	public void Enable(){
 		gameObject.renderer.material = m_matActivated;
 		m_bActivated = true;
-		rigidbody.AddForce(new Vector3(0, 5000, 0));
+		rigidbody.AddForce(new Vector3(0, 15000, 0));
 	}
 	
 	public void Disable(){

@@ -7,7 +7,7 @@ public class CFissure : MonoBehaviour {
 	int m_nombreDeMorceaux = 0;
 	List<bool> soude;
 	bool repaired = false;
-
+	bool soldering = false;
 
 	void Awake() {
 		soude = new List<bool>();
@@ -24,6 +24,9 @@ public class CFissure : MonoBehaviour {
 			repaired = true;
 			gameObject.transform.parent.SendMessage("Repair");
 		}
+
+		if(soldering && !repaired &&  !CApoilInput.InputPlayer.InteractFer)
+			Desolder();
 	}
 
 	void AttributeMorceauNumber(CMorceauFissure morceau){
@@ -33,7 +36,23 @@ public class CFissure : MonoBehaviour {
 
 	}
 
+	void Desolder(){
+		soldering = false;
+		for(int i = 0; i < soude.Count; i++)
+			soude[i] = false;
+		CMorceauFissure[] morceaux = GetComponentsInChildren<CMorceauFissure>();
+		foreach(CMorceauFissure m in morceaux)
+			m.Desolder();
+		repaired = false;
+	}
+
+	bool isDesoldered(){
+		return (!repaired) && (!soldering);
+	}
+
 	void SoudageMorceau(int id){
+		if(!soldering)
+			soldering = true;
 		soude[id] = true;
 	}
 

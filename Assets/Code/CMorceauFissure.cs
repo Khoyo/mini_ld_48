@@ -5,19 +5,21 @@ public class CMorceauFissure : MonoBehaviour {
 
 	public bool activated = false;
 	public Material m_matActivated;
+	Material m_baseMat;
 
 	int m_id;
 
 	// Use this for initialization
 	void Start () {
+		m_baseMat = renderer.material;
 		activated = false;
 		m_id = -1;
 		SendMessageUpwards("AttributeMorceauNumber", this);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void Desolder(){
+		activated = false;
+		renderer.material = m_baseMat;
 	}
 
 	public void OnSoudureTrigger(){
