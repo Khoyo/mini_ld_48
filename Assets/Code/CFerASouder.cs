@@ -9,6 +9,7 @@ public class CFerASouder : MonoBehaviour
 	float m_fSoudureRestante;
 	CGame m_Game;
 	bool m_bSoundLaunched;
+	bool lost = false;
 
 	// Use this for initialization
 	void Start () 
@@ -39,9 +40,11 @@ public class CFerASouder : MonoBehaviour
 		if(CApoilInput.InputPlayer.InteractFer)
 			m_fSoudureRestante -= Time.deltaTime;
 
-		if(m_fSoudureRestante < 0)
+		if(m_fSoudureRestante < 0 && !lost)
+		{
 			m_Game.EndGame(false);
-
+			lost = true;
+		}
 	}
 	
 	public void LaunchFire()
