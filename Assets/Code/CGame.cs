@@ -35,6 +35,8 @@ public class CGame : MonoBehaviour
 		m_pTrucAReparer = GameObject.FindGameObjectsWithTag("TrucAReparer");
 		foreach(GameObject current in m_pTrucAReparer)
 			m_nNbReparation++;
+
+		m_SoundEngine.postEvent("Play_AmbianceLabo_01", gameObject);
 	}
 	
 	// Update is called once per frame
@@ -62,6 +64,7 @@ public class CGame : MonoBehaviour
 		else
 			Debug.Log ("YOU LOSE!!");
 
+		m_SoundEngine.postEvent("Stop_AmbianceLabo_01", gameObject);
 		m_bWin = bWin;
 		m_bInGame = false;
 	}

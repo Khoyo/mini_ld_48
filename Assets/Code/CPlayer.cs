@@ -22,7 +22,7 @@ public class CPlayer : MonoBehaviour
 	float m_fTimerWakeUp;
 	float m_fTimerWakeUpMax = 2.0f;
 	float m_fTimerDie;
-	float m_fTimerDieMax = 2.0f;
+	float m_fTimerDieMax = 4.0f;
 	float m_fAngleWake;
 	bool m_bLaunchMenu;
 	CFerASouder m_Fer;
@@ -76,7 +76,10 @@ public class CPlayer : MonoBehaviour
 				Move();
 				MoveHead();
 				if(!m_Game.m_bInGame)
+				{
+					m_fAngleWake = 0.0f;
 					m_eState = Estate.e_end_win;
+				}
 				break;
 			}
 			case Estate.e_end_win:
