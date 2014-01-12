@@ -8,7 +8,8 @@ public class CPlayer : MonoBehaviour
 	{
 		e_Start,
 		e_normal,
-		e_end
+		e_end_win,
+		e_end_lose
 	}
 
 	Estate m_eState;
@@ -74,7 +75,7 @@ public class CPlayer : MonoBehaviour
 					m_eState = Estate.e_end;
 				break;
 			}
-			case Estate.e_end:
+			case Estate.e_end_win:
 			{
 				break;
 			}
