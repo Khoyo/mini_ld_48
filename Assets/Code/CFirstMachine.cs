@@ -30,6 +30,7 @@ public class CFirstMachine : MonoBehaviour {
 			renderer.material = mactive;
 			m_bactive = true;
 			m_fTimerAffichage = m_fTimerAffichageMax;
+			m_Game.GetSoundEngine().postEvent("Play_FirstMachineRepair", gameObject);
 		}
 	}
 	

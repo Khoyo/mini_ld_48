@@ -38,7 +38,7 @@ public class CTriggerSortieBureau : MonoBehaviour {
 	{
 		m_bIsActivated = true;
 		m_fTimerAffichage = m_fTimerAffichageMax;
-		m_Game.GetSoundEngine().postEvent("PlayPhrase1", gameObject);
+		m_Game.GetSoundEngine().postEvent("Play_TriggerSortieBureau", gameObject);
 	}
 
 	void OnGUI()

@@ -94,7 +94,10 @@ public class CPlayer : MonoBehaviour
 				}
 				else if(!m_bLaunchMenu)
 				{
-					m_Game.gameObject.transform.GetComponent<CMenuEndGame>().StartMenu();
+					if(m_Game.m_bWin)
+						m_Game.gameObject.transform.GetComponent<CMenuEndGame>().StartMenu();
+					else 
+						Application.LoadLevel(0);
 					m_bLaunchMenu = true;
 				}
 				
@@ -103,6 +106,19 @@ public class CPlayer : MonoBehaviour
 		}
 
 
+	}
+
+	void OnGUI()
+	{
+
+		GUIStyle centeredStyle = GUI.skin.GetStyle("Label");
+		centeredStyle.alignment = TextAnchor.UpperCenter;
+		if(m_fTimerDie < m_fTimerDieMax && !m_Game.m_bWin && m_eState == Estate.e_end_win)
+		{
+			GUI.skin.label.font = m_Game.m_Font; 
+			GUI.Label(new Rect( 0, m_Game.m_fHeight - 200, m_Game.m_fWidth, m_Game.m_fHeight), "Ho Shit, I'm dead!", centeredStyle);
+
+		}
 	}
 	
 	void Move()

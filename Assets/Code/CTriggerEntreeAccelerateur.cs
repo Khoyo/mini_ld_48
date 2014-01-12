@@ -6,7 +6,7 @@ public class CTriggerEntreeAccelerateur : MonoBehaviour {
 	bool m_bIsActivated;
 	CGame m_Game;
 	float m_fTimerAffichage;
-	const float m_fTimerAffichageMax = 3.0f;
+	const float m_fTimerAffichageMax = 2.0f;
 	float m_fHeightText;
 	public GameObject m_accelerateur;
 	// Use this for initialization
@@ -38,7 +38,8 @@ public class CTriggerEntreeAccelerateur : MonoBehaviour {
 	{
 		m_bIsActivated = true;
 		m_fTimerAffichage = m_fTimerAffichageMax;
-		m_Game.GetSoundEngine().postEvent("PlayPhrase1", gameObject);
+		m_Game.GetSoundEngine().postEvent("Play_EntreeAccel", gameObject);
+		m_Game.GetSoundEngine().postEvent("Stop_AmbianceAlarme", m_Game.gameObject);
 	}
 	
 	void OnGUI()

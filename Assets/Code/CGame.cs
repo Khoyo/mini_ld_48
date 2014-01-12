@@ -8,6 +8,7 @@ public class CGame : MonoBehaviour
 	CSoundEngine m_SoundEngine;
 
 	GameObject[] m_pTrucAReparer;
+	GameObject[] pExplosifs;
 	int m_nNbReparation;
 
 	public Font m_Font;
@@ -17,7 +18,7 @@ public class CGame : MonoBehaviour
 	public float m_fHeightText = 100;
 
 	public bool m_bInGame;
-	bool m_bWin;
+	public bool m_bWin;
 
 	// Use this for initialization
 	void Start () 
@@ -37,6 +38,13 @@ public class CGame : MonoBehaviour
 			m_nNbReparation++;
 
 		m_SoundEngine.postEvent("Play_AmbianceLabo_01", gameObject);
+		m_SoundEngine.postEvent("Play_AmbianceAlarme", gameObject);
+
+		pExplosifs = GameObject.FindGameObjectsWithTag("Explosif");
+		foreach(GameObject currentExplosif in pExplosifs)
+		{
+			currentExplosif.GetComponent<CExplosif>().ArmExplosion();
+		}
 	}
 	
 	// Update is called once per frame
@@ -47,6 +55,10 @@ public class CGame : MonoBehaviour
 		
 		if(CApoilInput.Quit)
 			Application.Quit();
+
+		if(CApoilInput.DebugF10)
+			EndGame(false);
+
 		if(m_bInGame)
 		{
 			if(m_nNbReparation == 0)
@@ -62,11 +74,24 @@ public class CGame : MonoBehaviour
 
 		}
 		else
+		{
 			Debug.Log ("YOU LOSE!!");
+			DestroyTheWorld();
+		}
 
 		m_SoundEngine.postEvent("Stop_AmbianceLabo_01", gameObject);
+		m_SoundEngine.postEvent("Stop_AmbianceAlarme", gameObject);
 		m_bWin = bWin;
 		m_bInGame = false;
+	}
+
+	void DestroyTheWorld()
+	{
+		GameObject[] pExplosifs = GameObject.FindGameObjectsWithTag("Explosif");
+		foreach(GameObject currentExplosif in pExplosifs)
+		{
+			currentExplosif.GetComponent<CExplosif>().Explode();
+		}
 	}
 
 	public CSoundEngine GetSoundEngine()
