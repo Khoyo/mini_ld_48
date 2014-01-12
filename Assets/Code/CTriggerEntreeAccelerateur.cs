@@ -8,7 +8,7 @@ public class CTriggerEntreeAccelerateur : MonoBehaviour {
 	float m_fTimerAffichage;
 	const float m_fTimerAffichageMax = 3.0f;
 	float m_fHeightText;
-	
+	public GameObject m_accelerateur;
 	// Use this for initialization
 	void Start () 
 	{
@@ -50,6 +50,7 @@ public class CTriggerEntreeAccelerateur : MonoBehaviour {
 		{
 			GUI.skin.label.font = m_Game.m_Font; 
 			GUI.Label(new Rect( 0, m_Game.m_fHeight - m_fHeightText, m_Game.m_fWidth, m_Game.m_fHeight), "let's go to repair!", centeredStyle);
+			m_accelerateur.GetComponent<CAccelerateur>().Close();
 		}
 	}
 }
