@@ -118,9 +118,9 @@
 					<ShortName>phrase2_3sec.wav</ShortName>
 					<Path>sfx\phrase2_3sec_ddc98ef4.wem</Path>
 				</File>
-				<File Id="507428549" Language="SFX">
-					<ShortName>phrase3_3sec.wav</ShortName>
-					<Path>sfx\phrase3_3sec_ddc98ef4.wem</Path>
+				<File Id="324252156" Language="SFX">
+					<ShortName>phrase3_2sec.wav</ShortName>
+					<Path>sfx\phrase3_2sec_ddc98ef4.wem</Path>
 				</File>
 				<File Id="555857019" Language="SFX">
 					<ShortName>SoudureAire.wav</ShortName>
