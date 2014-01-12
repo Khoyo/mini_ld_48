@@ -25,6 +25,7 @@
 			<Path>Ludum48_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="271290123" Name="PlayFire" />
+				<Event Id="1615122865" Name="PlayPhrase1" />
 				<Event Id="3457651409" Name="StopFire" />
 			</IncludedEvents>
 			<IncludedDialogueEvents />
@@ -33,6 +34,10 @@
 				<File Id="774285724" Language="SFX">
 					<ShortName>FerASouder.wav</ShortName>
 					<Path>sfx\ferasouder_9c39fb3d.wem</Path>
+				</File>
+				<File Id="82976755" Language="SFX">
+					<ShortName>phrase1_5sec.wav</ShortName>
+					<Path>sfx\phrase1_5sec_ddc98ef4.wem</Path>
 				</File>
 			</IncludedFullFiles>
 			<IncludedPrefetchFiles />

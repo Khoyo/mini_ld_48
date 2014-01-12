@@ -1,7 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
 	271290123	PlayFire			\Default Work Unit\PlayFire	
+	1615122865	PlayPhrase1			\Default Work Unit\PlayPhrase1	
 	3457651409	StopFire			\Default Work Unit\StopFire	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	82976755	phrase1_5sec	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\miniLD_48\.cache\Windows\sfx\phrase1_5sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\phrase1_5sec		937040
 	774285724	FerASouder	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\miniLD_48\.cache\Windows\sfx\ferasouder_9c39fb3d.wem		\Actor-Mixer Hierarchy\Default Work Unit\FerASouder		260300
 

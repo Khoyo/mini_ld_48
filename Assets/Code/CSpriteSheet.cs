@@ -3,19 +3,19 @@ using System.Collections;
 
 public class CSpriteSheet : MonoBehaviour {
 
-	public int columns = 2;
-	public int rows = 2;
-	public float framesPerSecond = 10f;
+	public int m_nColumns = 8;
+	public int m_nRows = 13;
+	public float m_fFramesPerSecond = 20f;
 	
 	//the current frame to display
-	private int index = 0;
+	private int m_nIndex = 0;
 	
 	void Start()
 	{
 		StartCoroutine(updateTiling());
 		
 		//set the tile size of the texture (in UV units), based on the rows and columns
-		Vector2 size = new Vector2(1f / columns, 1f / rows);
+		Vector2 size = new Vector2(1f / m_nColumns, 1f / m_nRows);
 		renderer.sharedMaterial.SetTextureScale("_MainTex", size);
 	}
 	
@@ -24,17 +24,17 @@ public class CSpriteSheet : MonoBehaviour {
 		while (true)
 		{
 			//move to the next index
-			index++;
-			if (index >= rows * columns)
-				index = 0;
+			m_nIndex++;
+			if (m_nIndex >= m_nRows * m_nColumns)
+				m_nIndex = 0;
 			
 			//split into x and y indexes
-			Vector2 offset = new Vector2((float)index / columns - (index / columns), //x index
-			                             (index / columns) / (float)rows);          //y index
+			Vector2 offset = new Vector2((float)m_nIndex / m_nColumns - (m_nIndex / m_nColumns), //x index
+			                             (m_nIndex / m_nColumns) / (float)m_nRows);          //y index
 			
 			renderer.sharedMaterial.SetTextureOffset("_MainTex", offset);
 			
-			yield return new WaitForSeconds(1f / framesPerSecond);
+			yield return new WaitForSeconds(1f / m_fFramesPerSecond);
 		}
 		
 	}
