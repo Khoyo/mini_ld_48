@@ -6,12 +6,15 @@ public class CFerASouder : MonoBehaviour
 	GameObject m_Etincelle;
 	float m_fTimerEtincelle;
 	const float m_fTimerEtincelleMax = 0.2f;
+	float m_fSoudureRestante;
 	CGame m_Game;
 	bool m_bSoundLaunched;
 
 	// Use this for initialization
 	void Start () 
 	{
+		m_fSoudureRestante = 20;
+
 		m_Etincelle = gameObject.transform.FindChild("Etincelles").gameObject;
 		m_fTimerEtincelle = 0.0f;
 		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
@@ -32,6 +35,13 @@ public class CFerASouder : MonoBehaviour
 		{
 			StopFire();
 		}
+
+		if(CApoilInput.InputPlayer.InteractFer)
+			m_fSoudureRestante -= Time.deltaTime;
+
+		if(m_fSoudureRestante < 0)
+			m_Game.EndGame(false);
+
 	}
 	
 	public void LaunchFire()
