@@ -21,8 +21,10 @@ public class CPlayer : MonoBehaviour
 	float m_fTimerJumpMax = 1.0f;
 	float m_fTimerWakeUp;
 	float m_fTimerWakeUpMax = 2.0f;
-	float m_fCompter;
+	float m_fTimerDie;
+	float m_fTimerDieMax = 2.0f;
 	float m_fAngleWake;
+	bool m_bLaunchMenu;
 	CFerASouder m_Fer;
 	CHand m_Hand;
 	CGame m_Game;
@@ -37,7 +39,9 @@ public class CPlayer : MonoBehaviour
 		m_Hand = gameObject.transform.FindChild("MainCamera").FindChild("Hand").GetComponent<CHand>();
 		m_fTimerJump = 0.0f;
 		m_fTimerWakeUp = 0.0f;
+		m_fTimerDie = 0.0f;
 		m_eState = Estate.e_Start;
+		m_bLaunchMenu = false;
 		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
 	}
 	
@@ -46,7 +50,7 @@ public class CPlayer : MonoBehaviour
 	{
 		if(m_fTimerJump >= 0.0f)
 			m_fTimerJump -= Time.deltaTime;
-		InputsPlayer();
+
 
 		switch(m_eState)
 		{
@@ -55,7 +59,6 @@ public class CPlayer : MonoBehaviour
 				if(m_fTimerWakeUp < m_fTimerWakeUpMax)
 				{
 					m_fTimerWakeUp += Time.deltaTime;
-					m_fCompter += 1;
 					float fAngleBefore = m_fAngleWake;
 					m_fAngleWake = CApoilMath.InterpolationLinear(m_fTimerWakeUp, 0.0f, m_fTimerWakeUpMax, 0.0f, 90.0f);
 					float fAngleRad = CApoilMath.ConvertDegreeToRadian(m_fAngleWake - fAngleBefore);
@@ -69,6 +72,7 @@ public class CPlayer : MonoBehaviour
 			}
 			case Estate.e_normal:
 			{
+				InputsPlayer();
 				Move();
 				MoveHead();
 				if(!m_Game.m_bInGame)
@@ -77,6 +81,20 @@ public class CPlayer : MonoBehaviour
 			}
 			case Estate.e_end_win:
 			{
+				if(m_fTimerDie < m_fTimerDieMax)
+				{
+					m_fTimerDie += Time.deltaTime;
+					float fAngleBefore = m_fAngleWake;
+					m_fAngleWake = CApoilMath.InterpolationLinear(m_fTimerDie, 0.0f, m_fTimerDieMax, 0.0f, 90.0f);
+					float fAngleRad = CApoilMath.ConvertDegreeToRadian(m_fAngleWake - fAngleBefore);
+					gameObject.transform.RotateAround(new Vector3(0,0,1), -fAngleRad);			
+				}
+				else if(!m_bLaunchMenu)
+				{
+					m_Game.gameObject.transform.GetComponent<CMenuEndGame>().StartMenu();
+					m_bLaunchMenu = true;
+				}
+				
 				break;
 			}
 		}

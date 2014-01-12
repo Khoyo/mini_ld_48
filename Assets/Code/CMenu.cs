@@ -43,7 +43,9 @@ public class CMenu : MonoBehaviour
 	void Update () 
 	{
 		if(m_EState == EmenuState.e_splash && m_fTempsSplash>0.0f)
-				m_fTempsSplash -= Time.deltaTime;
+			m_fTempsSplash -= Time.deltaTime;
+		if(Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
 	}
 	
 	void OnGUI() 
