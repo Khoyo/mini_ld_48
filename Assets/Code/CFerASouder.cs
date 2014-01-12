@@ -6,7 +6,7 @@ public class CFerASouder : MonoBehaviour
 	GameObject m_Etincelle;
 	float m_fTimerEtincelle;
 	const float m_fTimerEtincelleMax = 0.2f;
-	float m_fSoudureRestante;
+	public float m_fSoudureRestante = 20;
 	CGame m_Game;
 	bool m_bSoundLaunched;
 	bool lost = false;
@@ -14,8 +14,6 @@ public class CFerASouder : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		m_fSoudureRestante = 20;
-
 		m_Etincelle = gameObject.transform.FindChild("Etincelles").gameObject;
 		m_fTimerEtincelle = 0.0f;
 		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
