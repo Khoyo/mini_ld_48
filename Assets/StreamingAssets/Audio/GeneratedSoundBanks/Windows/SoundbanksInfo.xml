@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" SchemaVersion="9">
 	<RootPaths>
-		<ProjectRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\</ProjectRoot>
-		<SourceFilesRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents />
 	<StreamedFiles />
@@ -25,17 +25,19 @@
 			<Path>Ludum48_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="950483736" Name="Play_AmbianceLabo_01" />
-				<Event Id="2099555730" Name="Play_Button" />
 				<Event Id="2721379730" Name="Play_DoorClose" />
 				<Event Id="2726541816" Name="Play_DoorOver" />
-				<Event Id="1721497727" Name="Play_ExploFin" />
-				<Event Id="4030404899" Name="Play_Explosion" />
+				<Event Id="885085521" Name="Play_EntreeAccel" />
+				<Event Id="1143529360" Name="Play_FirstMachineRepair" />
 				<Event Id="2822502042" Name="Play_Pas" />
 				<Event Id="3800211151" Name="Play_Soudure" />
+				<Event Id="1202525026" Name="Play_TriggerSortieBureau" />
 				<Event Id="70934826" Name="Stop_AmbianceLabo_01" />
-				<Event Id="559390421" Name="Stop_Explosion" />
+				<Event Id="3383132931" Name="Stop_EntreeAccel" />
+				<Event Id="1345442210" Name="Stop_FirstMachineRepair" />
 				<Event Id="438286008" Name="Stop_Pas" />
 				<Event Id="3789912477" Name="Stop_Soudure" />
+				<Event Id="1541940136" Name="Stop_TriggerSortieBureau" />
 			</IncludedEvents>
 			<IncludedDialogueEvents />
 			<ReferencedStreamedFiles />
@@ -44,10 +46,6 @@
 					<ShortName>AmbianceLabo_01.wav</ShortName>
 					<Path>sfx\ambiancelabo_01_6ee06457.wem</Path>
 				</File>
-				<File Id="115587976" Language="SFX">
-					<ShortName>Button.wav</ShortName>
-					<Path>sfx\button_ddc98ef4.wem</Path>
-				</File>
 				<File Id="691745707" Language="SFX">
 					<ShortName>DoorClose.wav</ShortName>
 					<Path>sfx\doorclose_ddc98ef4.wem</Path>
@@ -55,42 +53,6 @@
 				<File Id="480123363" Language="SFX">
 					<ShortName>DoorOver.wav</ShortName>
 					<Path>sfx\doorover_ddc98ef4.wem</Path>
-				</File>
-				<File Id="918519813" Language="SFX">
-					<ShortName>Explo01.wav</ShortName>
-					<Path>sfx\explo01_ddc98ef4.wem</Path>
-				</File>
-				<File Id="1056645394" Language="SFX">
-					<ShortName>Explo02.wav</ShortName>
-					<Path>sfx\explo02_ddc98ef4.wem</Path>
-				</File>
-				<File Id="30142527" Language="SFX">
-					<ShortName>Explo03.wav</ShortName>
-					<Path>sfx\explo03_ddc98ef4.wem</Path>
-				</File>
-				<File Id="247293320" Language="SFX">
-					<ShortName>Explo04.wav</ShortName>
-					<Path>sfx\explo04_ddc98ef4.wem</Path>
-				</File>
-				<File Id="157269512" Language="SFX">
-					<ShortName>Explo05.wav</ShortName>
-					<Path>sfx\explo05_ddc98ef4.wem</Path>
-				</File>
-				<File Id="148959005" Language="SFX">
-					<ShortName>Explo06.wav</ShortName>
-					<Path>sfx\explo06_ddc98ef4.wem</Path>
-				</File>
-				<File Id="692995290" Language="SFX">
-					<ShortName>Explo07.wav</ShortName>
-					<Path>sfx\explo07_ddc98ef4.wem</Path>
-				</File>
-				<File Id="105387481" Language="SFX">
-					<ShortName>Explo08.wav</ShortName>
-					<Path>sfx\explo08_ddc98ef4.wem</Path>
-				</File>
-				<File Id="841309189" Language="SFX">
-					<ShortName>ExploFin.wav</ShortName>
-					<Path>sfx\explofin_ddc98ef4.wem</Path>
 				</File>
 				<File Id="904528983" Language="SFX">
 					<ShortName>Metal_01.wav</ShortName>
@@ -147,6 +109,18 @@
 				<File Id="840590429" Language="SFX">
 					<ShortName>PasLino_06.wav</ShortName>
 					<Path>sfx\paslino_06_ddc98ef4.wem</Path>
+				</File>
+				<File Id="384431800" Language="SFX">
+					<ShortName>phrase1_5sec.wav</ShortName>
+					<Path>sfx\phrase1_5sec_ddc98ef4.wem</Path>
+				</File>
+				<File Id="1019139357" Language="SFX">
+					<ShortName>phrase2_3sec.wav</ShortName>
+					<Path>sfx\phrase2_3sec_ddc98ef4.wem</Path>
+				</File>
+				<File Id="507428549" Language="SFX">
+					<ShortName>phrase3_3sec.wav</ShortName>
+					<Path>sfx\phrase3_3sec_ddc98ef4.wem</Path>
 				</File>
 				<File Id="555857019" Language="SFX">
 					<ShortName>SoudureAire.wav</ShortName>
