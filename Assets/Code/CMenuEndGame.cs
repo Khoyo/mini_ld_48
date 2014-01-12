@@ -14,6 +14,7 @@ public class CMenuEndGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		m_Texture_Cinematique.Stop ();
 		m_fTempsVideoIntro = 0.0f;
 		m_bStart = false;
 		m_bLaunchGame = false;

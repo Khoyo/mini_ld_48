@@ -32,6 +32,11 @@ public class CMenu : MonoBehaviour
 		m_EState = EmenuState.e_splash;
 		m_fTempsVideoIntro = 0.0f;
 		m_bLaunchGame = false;
+
+		if(GameObject.Find("_Game") != null)
+			Object.Destroy(GameObject.Find("_Game"));
+
+		Debug.Log ("Start");
 	}
 	
 	// Update is called once per frame
