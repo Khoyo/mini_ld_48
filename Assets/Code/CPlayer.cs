@@ -24,6 +24,7 @@ public class CPlayer : MonoBehaviour
 	float m_fAngleWake;
 	CFerASouder m_Fer;
 	CHand m_Hand;
+	CGame m_Game;
 
 	
 	// Use this for initialization
@@ -36,6 +37,7 @@ public class CPlayer : MonoBehaviour
 		m_fTimerJump = 0.0f;
 		m_fTimerWakeUp = 0.0f;
 		m_eState = Estate.e_Start;
+		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
 	}
 	
 	// Update is called once per frame
@@ -68,6 +70,8 @@ public class CPlayer : MonoBehaviour
 			{
 				Move();
 				MoveHead();
+				if(!m_Game.m_bInGame)
+					m_eState = Estate.e_end;
 				break;
 			}
 			case Estate.e_end:
