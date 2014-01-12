@@ -26,6 +26,11 @@ public class CMenuEndGame : MonoBehaviour {
 	
 	}
 
+	void onResume()
+	{
+		m_Texture_Cinematique.Stop ();
+	}
+
 	public void StartMenu()
 	{
 		m_bStart = true;
