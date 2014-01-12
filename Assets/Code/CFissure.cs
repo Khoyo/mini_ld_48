@@ -6,6 +6,8 @@ public class CFissure : MonoBehaviour {
 
 	int m_nombreDeMorceaux = 0;
 	List<bool> soude;
+	bool repaired = false;
+
 
 	void Awake() {
 		soude = new List<bool>();
@@ -18,13 +20,15 @@ public class CFissure : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(!soude.Contains(false))
-			SendMessageUpwards("Activate");
+		if(!soude.Contains(false) && !repaired){
+			repaired = true;
+			gameObject.transform.parent.SendMessage("Repair");
+		}
 	}
 
 	void AttributeMorceauNumber(CMorceauFissure morceau){
 		morceau.setID(soude.Count);
-		print(soude.Count);
+		//print(soude.Count);
 		soude.Add(false);
 
 	}

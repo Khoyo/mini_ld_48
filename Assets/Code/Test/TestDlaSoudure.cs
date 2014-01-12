@@ -16,7 +16,7 @@ public class TestDlaSoudure : MonoBehaviour {
 	
 	}
 
-	void Activate(){
+	void Repair(){
 		if(!bactive){
 			renderer.material = mactive;
 			bactive = true;
