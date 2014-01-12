@@ -42,11 +42,12 @@ public class CMenuEndGame : MonoBehaviour {
 			if(m_Texture_Cinematique.isPlaying)
 			{
 				m_fTempsVideoIntro += Time.deltaTime;
-				if(Input.GetKeyDown(KeyCode.Space) && m_fTempsVideoIntro>0.5f)
-					m_Texture_Cinematique.Stop ();
+				//if(Input.GetKeyDown(KeyCode.Space) && m_fTempsVideoIntro>0.5f)
+				//	m_Texture_Cinematique.Stop ();
 			}
 			else if(!m_bLaunchGame)
 			{
+				m_Texture_Cinematique.Stop ();
 				Application.LoadLevel(0);
 				m_bLaunchGame = true;
 			}

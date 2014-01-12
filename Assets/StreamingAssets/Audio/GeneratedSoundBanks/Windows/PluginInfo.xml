@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PluginInfo Project="Ludum Dare TIM" Platform="Windows" Key=" DE0F33E-4" Motion="false">
-	<Plugins />
+<PluginInfo Project="Ludum Dare TIM" Platform="Windows" Key="22B9652F-4" Motion="false">
+	<Plugins>
+		<Plugin Name="Wwise Silence" ID="6619138" />
+	</Plugins>
 </PluginInfo>

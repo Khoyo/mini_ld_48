@@ -25,9 +25,15 @@
 			<Path>Ludum48_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="950483736" Name="Play_AmbianceLabo_01" />
+				<Event Id="2099555730" Name="Play_Button" />
+				<Event Id="2721379730" Name="Play_DoorClose" />
+				<Event Id="2726541816" Name="Play_DoorOver" />
+				<Event Id="1721497727" Name="Play_ExploFin" />
+				<Event Id="4030404899" Name="Play_Explosion" />
 				<Event Id="2822502042" Name="Play_Pas" />
 				<Event Id="3800211151" Name="Play_Soudure" />
 				<Event Id="70934826" Name="Stop_AmbianceLabo_01" />
+				<Event Id="559390421" Name="Stop_Explosion" />
 				<Event Id="438286008" Name="Stop_Pas" />
 				<Event Id="3789912477" Name="Stop_Soudure" />
 			</IncludedEvents>
@@ -37,6 +43,54 @@
 				<File Id="179790232" Language="SFX">
 					<ShortName>AmbianceLabo_01.wav</ShortName>
 					<Path>sfx\ambiancelabo_01_6ee06457.wem</Path>
+				</File>
+				<File Id="115587976" Language="SFX">
+					<ShortName>Button.wav</ShortName>
+					<Path>sfx\button_ddc98ef4.wem</Path>
+				</File>
+				<File Id="691745707" Language="SFX">
+					<ShortName>DoorClose.wav</ShortName>
+					<Path>sfx\doorclose_ddc98ef4.wem</Path>
+				</File>
+				<File Id="480123363" Language="SFX">
+					<ShortName>DoorOver.wav</ShortName>
+					<Path>sfx\doorover_ddc98ef4.wem</Path>
+				</File>
+				<File Id="918519813" Language="SFX">
+					<ShortName>Explo01.wav</ShortName>
+					<Path>sfx\explo01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="1056645394" Language="SFX">
+					<ShortName>Explo02.wav</ShortName>
+					<Path>sfx\explo02_ddc98ef4.wem</Path>
+				</File>
+				<File Id="30142527" Language="SFX">
+					<ShortName>Explo03.wav</ShortName>
+					<Path>sfx\explo03_ddc98ef4.wem</Path>
+				</File>
+				<File Id="247293320" Language="SFX">
+					<ShortName>Explo04.wav</ShortName>
+					<Path>sfx\explo04_ddc98ef4.wem</Path>
+				</File>
+				<File Id="157269512" Language="SFX">
+					<ShortName>Explo05.wav</ShortName>
+					<Path>sfx\explo05_ddc98ef4.wem</Path>
+				</File>
+				<File Id="148959005" Language="SFX">
+					<ShortName>Explo06.wav</ShortName>
+					<Path>sfx\explo06_ddc98ef4.wem</Path>
+				</File>
+				<File Id="692995290" Language="SFX">
+					<ShortName>Explo07.wav</ShortName>
+					<Path>sfx\explo07_ddc98ef4.wem</Path>
+				</File>
+				<File Id="105387481" Language="SFX">
+					<ShortName>Explo08.wav</ShortName>
+					<Path>sfx\explo08_ddc98ef4.wem</Path>
+				</File>
+				<File Id="841309189" Language="SFX">
+					<ShortName>ExploFin.wav</ShortName>
+					<Path>sfx\explofin_ddc98ef4.wem</Path>
 				</File>
 				<File Id="904528983" Language="SFX">
 					<ShortName>Metal_01.wav</ShortName>
