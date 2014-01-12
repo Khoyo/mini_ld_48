@@ -8,6 +8,7 @@ public struct SPlayerInput
 	public bool MoveForward;
 	public bool MoveBackward;
 	public bool InteractHand;
+	public bool InteractHandDown;
 	public bool InteractFer;
 	public bool Jump;
 	public float MouseAngleX;
@@ -47,6 +48,7 @@ public class CApoilInput
 		InputPlayer.MouseAngleY = -Input.GetAxis("Mouse Y");
 		
 		InputPlayer.InteractHand = Input.GetMouseButton(0);
+		InputPlayer.InteractHandDown = Input.GetMouseButtonDown(0);
 		InputPlayer.InteractFer = Input.GetMouseButton(1);
 
 		InputPlayer.Jump = Input.GetKeyDown(KeyCode.Space);
