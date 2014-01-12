@@ -48,7 +48,7 @@ public class CGame : MonoBehaviour
 		if(bWin)
 			Debug.Log ("YOU WIN!!");
 		else
-			Debug.Log ("YOU LOSE!!);
+			Debug.Log ("YOU LOSE!!");
 	}
 
 	public CSoundEngine GetSoundEngine()
