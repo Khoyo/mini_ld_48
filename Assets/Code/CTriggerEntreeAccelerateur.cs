@@ -39,6 +39,7 @@ public class CTriggerEntreeAccelerateur : MonoBehaviour {
 		m_bIsActivated = true;
 		m_fTimerAffichage = m_fTimerAffichageMax;
 		m_Game.GetSoundEngine().postEvent("Play_EntreeAccel", gameObject);
+		m_Game.GetSoundEngine().postEvent("Stop_AmbianceAlarme", m_Game.gameObject);
 	}
 	
 	void OnGUI()

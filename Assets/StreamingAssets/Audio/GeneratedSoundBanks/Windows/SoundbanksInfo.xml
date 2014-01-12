@@ -24,6 +24,7 @@
 			<ShortName>Ludum48_SoundBank</ShortName>
 			<Path>Ludum48_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1811086550" Name="Play_AmbianceAlarme" />
 				<Event Id="950483736" Name="Play_AmbianceLabo_01" />
 				<Event Id="2721379730" Name="Play_DoorClose" />
 				<Event Id="2726541816" Name="Play_DoorOver" />
@@ -32,6 +33,7 @@
 				<Event Id="2822502042" Name="Play_Pas" />
 				<Event Id="3800211151" Name="Play_Soudure" />
 				<Event Id="1202525026" Name="Play_TriggerSortieBureau" />
+				<Event Id="351020924" Name="Stop_AmbianceAlarme" />
 				<Event Id="70934826" Name="Stop_AmbianceLabo_01" />
 				<Event Id="3383132931" Name="Stop_EntreeAccel" />
 				<Event Id="1345442210" Name="Stop_FirstMachineRepair" />
@@ -42,6 +44,10 @@
 			<IncludedDialogueEvents />
 			<ReferencedStreamedFiles />
 			<IncludedFullFiles>
+				<File Id="966758040" Language="SFX">
+					<ShortName>Alarme01.wav</ShortName>
+					<Path>sfx\alarme01_003a37d5.wem</Path>
+				</File>
 				<File Id="179790232" Language="SFX">
 					<ShortName>AmbianceLabo_01.wav</ShortName>
 					<Path>sfx\ambiancelabo_01_6ee06457.wem</Path>

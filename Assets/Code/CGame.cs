@@ -37,6 +37,7 @@ public class CGame : MonoBehaviour
 			m_nNbReparation++;
 
 		m_SoundEngine.postEvent("Play_AmbianceLabo_01", gameObject);
+		m_SoundEngine.postEvent("Play_AmbianceAlarme", gameObject);
 	}
 	
 	// Update is called once per frame
@@ -62,11 +63,19 @@ public class CGame : MonoBehaviour
 
 		}
 		else
+		{
 			Debug.Log ("YOU LOSE!!");
+			DestroyTheWorld();
+		}
 
 		m_SoundEngine.postEvent("Stop_AmbianceLabo_01", gameObject);
 		m_bWin = bWin;
 		m_bInGame = false;
+	}
+
+	void DestroyTheWorld()
+	{
+
 	}
 
 	public CSoundEngine GetSoundEngine()
