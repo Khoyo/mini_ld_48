@@ -40,7 +40,15 @@ public class CGame : MonoBehaviour
 			Application.Quit();
 
 		if(m_nNbReparation == 0)
-			Debug.Log ("YOU win!!");
+			EndGame(true);
+	}
+
+	public void EndGame(bool bWin)
+	{
+		if(bWin)
+			Debug.Log ("YOU WIN!!");
+		else
+			Debug.Log ("YOU LOSE!!);
 	}
 
 	public CSoundEngine GetSoundEngine()
@@ -50,7 +58,6 @@ public class CGame : MonoBehaviour
 
 	void Activate()
 	{
-		Debug.Log ("ytouhou");
 		m_nNbReparation--;
 	}
 }
