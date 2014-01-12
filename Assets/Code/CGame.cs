@@ -55,7 +55,10 @@ public class CGame : MonoBehaviour
 	public void EndGame(bool bWin)
 	{
 		if(bWin)
+		{
 			Debug.Log ("YOU WIN!!");
+			gameObject.transform.GetComponent<CMenuEndGame>().StartMenu();
+		}
 		else
 			Debug.Log ("YOU LOSE!!");
 
