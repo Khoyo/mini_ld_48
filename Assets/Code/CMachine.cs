@@ -13,7 +13,12 @@ public class CMachine : MonoBehaviour {
 	
 	void Update(){
 	}
-	
+
+	void Activate(){
+		Enable();
+		print ("Activate");
+	}
+
 	public void Enable(){
 		gameObject.renderer.material = m_matActivated;
 		m_bActivated = true;
