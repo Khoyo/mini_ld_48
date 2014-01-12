@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" SchemaVersion="9">
 	<RootPaths>
-		<ProjectRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\miniLD_48\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\miniLD_48\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\miniLD_48\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\</ProjectRoot>
+		<SourceFilesRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\miniLD_48\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>\\vmware-host\Shared Folders\Bureau\Ludum Dare mini TIM\JEU Video\Ludum Dare TIM\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents />
 	<StreamedFiles />
@@ -24,20 +24,87 @@
 			<ShortName>Ludum48_SoundBank</ShortName>
 			<Path>Ludum48_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="271290123" Name="PlayFire" />
-				<Event Id="1615122865" Name="PlayPhrase1" />
-				<Event Id="3457651409" Name="StopFire" />
+				<Event Id="950483736" Name="Play_AmbianceLabo_01" />
+				<Event Id="2822502042" Name="Play_Pas" />
+				<Event Id="3800211151" Name="Play_Soudure" />
+				<Event Id="70934826" Name="Stop_AmbianceLabo_01" />
+				<Event Id="438286008" Name="Stop_Pas" />
+				<Event Id="3789912477" Name="Stop_Soudure" />
 			</IncludedEvents>
 			<IncludedDialogueEvents />
 			<ReferencedStreamedFiles />
 			<IncludedFullFiles>
-				<File Id="774285724" Language="SFX">
-					<ShortName>FerASouder.wav</ShortName>
-					<Path>sfx\ferasouder_9c39fb3d.wem</Path>
+				<File Id="179790232" Language="SFX">
+					<ShortName>AmbianceLabo_01.wav</ShortName>
+					<Path>sfx\ambiancelabo_01_6ee06457.wem</Path>
 				</File>
-				<File Id="82976755" Language="SFX">
-					<ShortName>phrase1_5sec.wav</ShortName>
-					<Path>sfx\phrase1_5sec_ddc98ef4.wem</Path>
+				<File Id="904528983" Language="SFX">
+					<ShortName>Metal_01.wav</ShortName>
+					<Path>sfx\metal_01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="958507377" Language="SFX">
+					<ShortName>Metal_02.wav</ShortName>
+					<Path>sfx\metal_02_ddc98ef4.wem</Path>
+				</File>
+				<File Id="357934829" Language="SFX">
+					<ShortName>Metal_03.wav</ShortName>
+					<Path>sfx\metal_03_ddc98ef4.wem</Path>
+				</File>
+				<File Id="748702434" Language="SFX">
+					<ShortName>Metal_04.wav</ShortName>
+					<Path>sfx\metal_04_ddc98ef4.wem</Path>
+				</File>
+				<File Id="223891515" Language="SFX">
+					<ShortName>Metal_05.wav</ShortName>
+					<Path>sfx\metal_05_ddc98ef4.wem</Path>
+				</File>
+				<File Id="827073558" Language="SFX">
+					<ShortName>Metal_06.wav</ShortName>
+					<Path>sfx\metal_06_ddc98ef4.wem</Path>
+				</File>
+				<File Id="604760911" Language="SFX">
+					<ShortName>Metal_07.wav</ShortName>
+					<Path>sfx\metal_07_ddc98ef4.wem</Path>
+				</File>
+				<File Id="478968548" Language="SFX">
+					<ShortName>Metal_08.wav</ShortName>
+					<Path>sfx\metal_08_ddc98ef4.wem</Path>
+				</File>
+				<File Id="52611267" Language="SFX">
+					<ShortName>PasLino_01.wav</ShortName>
+					<Path>sfx\paslino_01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="1036422983" Language="SFX">
+					<ShortName>PasLino_02.wav</ShortName>
+					<Path>sfx\paslino_02_ddc98ef4.wem</Path>
+				</File>
+				<File Id="714001099" Language="SFX">
+					<ShortName>PasLino_03.wav</ShortName>
+					<Path>sfx\paslino_03_ddc98ef4.wem</Path>
+				</File>
+				<File Id="850334438" Language="SFX">
+					<ShortName>PasLino_04.wav</ShortName>
+					<Path>sfx\paslino_04_ddc98ef4.wem</Path>
+				</File>
+				<File Id="645169481" Language="SFX">
+					<ShortName>PasLino_05.wav</ShortName>
+					<Path>sfx\paslino_05_ddc98ef4.wem</Path>
+				</File>
+				<File Id="840590429" Language="SFX">
+					<ShortName>PasLino_06.wav</ShortName>
+					<Path>sfx\paslino_06_ddc98ef4.wem</Path>
+				</File>
+				<File Id="555857019" Language="SFX">
+					<ShortName>SoudureAire.wav</ShortName>
+					<Path>sfx\soudureaire_ec99de29.wem</Path>
+				</File>
+				<File Id="344518301" Language="SFX">
+					<ShortName>SoudureFausse.wav</ShortName>
+					<Path>sfx\soudurefausse_0cabd240.wem</Path>
+				</File>
+				<File Id="93032367" Language="SFX">
+					<ShortName>SoudureOK.wav</ShortName>
+					<Path>sfx\soudureok_c263707e.wem</Path>
 				</File>
 			</IncludedFullFiles>
 			<IncludedPrefetchFiles />
