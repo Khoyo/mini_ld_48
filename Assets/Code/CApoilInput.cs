@@ -31,7 +31,8 @@ public class CApoilInput
 	
 	public static void Init()
 	{
-		//Screen.lockCursor = true;
+		if(!Application.isEditor)
+			Screen.lockCursor = true;
 	}
 	
 	//-------------------------------------------------------------------------------
