@@ -4,23 +4,34 @@ using System.Collections;
 public class CAccelerateur : MonoBehaviour {
 
 	bool m_isOpened = false;
-	CGame m_Game;
+	public GameObject m_Game;
+	
+	public float m_fLife;
+	bool m_bRepaired = false;
 
 	// Use this for initialization
-	void Start ()
-	{
-		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
+	void Start () {
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(!m_bRepaired)
+			m_fLife -= Time.deltaTime;
+		if(m_fLife<0)
+			m_Game.GetComponent<CGame>().EndGame(false);
 	}
 
 	public void Open(){
 		animation.PlayQueued("Ouverture");
 		m_isOpened = true;
-		m_Game.GetSoundEngine().postEvent("Play_DoorOver", gameObject);
+		m_Game.GetComponent<CGame>().GetSoundEngine().postEvent("Play_DoorOver", gameObject);
+
+
+	}
+
+	void Repair(){
+		m_bRepaired = true;
 	}
 
 	public void Close()
@@ -28,7 +39,7 @@ public class CAccelerateur : MonoBehaviour {
 		if(m_isOpened){
 			animation.PlayQueued("Fermeture");
 			m_isOpened = false;
-			m_Game.GetSoundEngine().postEvent("Play_DoorClose", gameObject);
+			m_Game.GetComponent<CGame>().GetSoundEngine().postEvent("Play_DoorClose", gameObject);
 		}
 
 	}
