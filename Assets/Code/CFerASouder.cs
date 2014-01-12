@@ -18,6 +18,7 @@ public class CFerASouder : MonoBehaviour
 		m_Etincelle.SetActiveRecursively(false);
 		m_Etincelle.active = true;
 		m_bSoundLaunched = false;
+		m_Game.GetSoundEngine().setSwitch("Soudure","Aire", gameObject);
 	}
 	
 	// Update is called once per frame
@@ -39,7 +40,9 @@ public class CFerASouder : MonoBehaviour
 		m_fTimerEtincelle = m_fTimerEtincelleMax;
 		if(!m_bSoundLaunched)
 		{
-			m_Game.GetSoundEngine().postEvent("PlayFire", gameObject);
+
+			m_Game.GetSoundEngine().postEvent("Play_Soudure", gameObject);
+
 			m_bSoundLaunched = true;
 		}
 	}
@@ -48,9 +51,17 @@ public class CFerASouder : MonoBehaviour
 	{
 		m_Etincelle.SetActiveRecursively(false);
 		m_Etincelle.active = true;
-		m_Game.GetSoundEngine().postEvent("StopFire", gameObject);
+		m_Game.GetSoundEngine().postEvent("Stop_Soudure", gameObject);
 		m_bSoundLaunched = false;
 	}
-	
+
+	public void OnTriggerEnter(Collider other)
+	{
+		if(other.CompareTag("Fissure"))
+		{
+			m_Game.GetSoundEngine().setSwitch("Soudure","OK", gameObject);
+		}
+	}
+
 	
 }

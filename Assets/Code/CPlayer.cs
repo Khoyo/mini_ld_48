@@ -1,24 +1,41 @@
 using UnityEngine;
 using System.Collections;
 
-public class CPlayer : MonoBehaviour {
+public class CPlayer : MonoBehaviour 
+{
 
+	enum Estate
+	{
+		e_Start,
+		e_normal,
+		e_end
+	}
+
+	Estate m_eState;
 	float m_fVelocityWalk = 10.0f;
 	float m_fVelocityRotation = 0.5f;
 	float m_fVelocityJump = 250.0f;
 	float m_fAngleY;
 	float m_fTimerJump;
 	float m_fTimerJumpMax = 1.0f;
+	float m_fTimerWakeUp;
+	float m_fTimerWakeUpMax = 2.0f;
+	float m_fCompter;
+	float m_fAngleWake;
 	CFerASouder m_Fer;
 	CHand m_Hand;
+
 	
 	// Use this for initialization
 	void Start () 
 	{
 		m_fAngleY = 0.0f;
+		m_fAngleWake = 0.0f;
 		m_Fer = gameObject.transform.FindChild("MainCamera").FindChild("Fer").GetComponent<CFerASouder>();
 		m_Hand = gameObject.transform.FindChild("MainCamera").FindChild("Hand").GetComponent<CHand>();
 		m_fTimerJump = 0.0f;
+		m_fTimerWakeUp = 0.0f;
+		m_eState = Estate.e_Start;
 	}
 	
 	// Update is called once per frame
@@ -26,10 +43,40 @@ public class CPlayer : MonoBehaviour {
 	{
 		if(m_fTimerJump >= 0.0f)
 			m_fTimerJump -= Time.deltaTime;
-
-		Move();
-		MoveHead();
 		InputsPlayer();
+
+		switch(m_eState)
+		{
+			case Estate.e_Start:
+			{
+				if(m_fTimerWakeUp < m_fTimerWakeUpMax)
+				{
+					m_fTimerWakeUp += Time.deltaTime;
+					m_fCompter += 1;
+					float fAngleBefore = m_fAngleWake;
+					m_fAngleWake = CApoilMath.InterpolationLinear(m_fTimerWakeUp, 0.0f, m_fTimerWakeUpMax, 0.0f, 90.0f);
+					float fAngleRad = CApoilMath.ConvertDegreeToRadian(m_fAngleWake - fAngleBefore);
+					gameObject.transform.RotateAround(new Vector3(0,0,1), -fAngleRad);			
+				}
+				else
+				{
+					m_eState = Estate.e_normal;
+				}
+				break;
+			}
+			case Estate.e_normal:
+			{
+				Move();
+				MoveHead();
+				break;
+			}
+			case Estate.e_end:
+			{
+				break;
+			}
+		}
+
+
 	}
 	
 	void Move()

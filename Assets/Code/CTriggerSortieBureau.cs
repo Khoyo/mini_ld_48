@@ -7,7 +7,7 @@ public class CTriggerSortieBureau : MonoBehaviour {
 	CGame m_Game;
 	float m_fTimerAffichage;
 	const float m_fTimerAffichageMax = 5.0f;
-	const float m_fHeightText = 100;
+	float m_fHeightText;
 
 	// Use this for initialization
 	void Start () 
@@ -15,6 +15,7 @@ public class CTriggerSortieBureau : MonoBehaviour {
 		m_bIsActivated = false;
 		m_Game = GameObject.Find("_Game").GetComponent<CGame>();
 		m_fTimerAffichage = 0.0f;
+		m_fHeightText = m_Game.m_fHeightText;
 	}
 	
 	// Update is called once per frame
