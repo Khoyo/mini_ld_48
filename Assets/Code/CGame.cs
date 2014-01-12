@@ -92,6 +92,8 @@ public class CGame : MonoBehaviour
 		{
 			currentExplosif.GetComponent<CExplosif>().Explode();
 		}
+		m_SoundEngine.postEvent("Play_ExploFin", gameObject);
+
 	}
 
 	public CSoundEngine GetSoundEngine()

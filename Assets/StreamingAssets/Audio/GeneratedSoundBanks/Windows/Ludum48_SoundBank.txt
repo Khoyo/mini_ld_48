@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1202525026	Play_TriggerSortieBureau			\Default Work Unit\Play_TriggerSortieBureau	
 	1345442210	Stop_FirstMachineRepair			\Default Work Unit\Stop_FirstMachineRepair	
 	1541940136	Stop_TriggerSortieBureau			\Default Work Unit\Stop_TriggerSortieBureau	
+	1721497727	Play_ExploFin			\Default Work Unit\Play_ExploFin	
 	1811086550	Play_AmbianceAlarme			\Default Work Unit\Play_AmbianceAlarme	
 	2721379730	Play_DoorClose			\Default Work Unit\Play_DoorClose	
 	2726541816	Play_DoorOver			\Default Work Unit\Play_DoorOver	
@@ -46,6 +47,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	748702434	Metal_04	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_04		25920
 	827073558	Metal_06	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_06		26176
 	840590429	PasLino_06	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_06		25792
+	841309189	ExploFin	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\explofin_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\ExploFin		2785344
 	850334438	PasLino_04	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_04		34348
 	904528983	Metal_01	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_01		31296
 	958507377	Metal_02	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_02		29248

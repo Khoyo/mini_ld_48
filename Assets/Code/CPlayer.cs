@@ -22,7 +22,7 @@ public class CPlayer : MonoBehaviour
 	float m_fTimerWakeUp;
 	float m_fTimerWakeUpMax = 2.0f;
 	float m_fTimerDie;
-	float m_fTimerDieMax = 4.0f;
+	float m_fTimerDieMax = 6.0f;
 	float m_fAngleWake;
 	bool m_bLaunchMenu;
 	CFerASouder m_Fer;
