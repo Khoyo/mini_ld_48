@@ -72,7 +72,7 @@ public class CPlayer : MonoBehaviour
 				Move();
 				MoveHead();
 				if(!m_Game.m_bInGame)
-					m_eState = Estate.e_end;
+					m_eState = Estate.e_end_win;
 				break;
 			}
 			case Estate.e_end_win:
