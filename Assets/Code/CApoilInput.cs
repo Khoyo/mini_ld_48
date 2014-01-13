@@ -40,9 +40,9 @@ public class CApoilInput
 	//-------------------------------------------------------------------------------
 	public static void Process(float fDeltatime) 
 	{	
-		InputPlayer.MoveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow);
+		InputPlayer.MoveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
 		InputPlayer.MoveBackward = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
-		InputPlayer.MoveLeft = Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow);
+		InputPlayer.MoveLeft = Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);;
 		InputPlayer.MoveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);		
 		
 		InputPlayer.MouseAngleX = Input.GetAxis("Mouse X");
