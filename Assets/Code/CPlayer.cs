@@ -13,7 +13,7 @@ public class CPlayer : MonoBehaviour
 	}
 
 	Estate m_eState;
-	float m_fVelocityWalk = 10.0f;
+	float m_fVelocityWalk = 15.0f;
 	float m_fVelocityRotation = 0.5f;
 	float m_fVelocityJump = 250.0f;
 	float m_fAngleY;
