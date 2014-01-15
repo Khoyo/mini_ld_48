@@ -42,7 +42,6 @@ public class CGame : MonoBehaviour
 			m_nNbReparation++;
 
 		m_SoundEngine.postEvent("Play_AmbianceLabo_01", gameObject);
-		m_SoundEngine.postEvent("Play_AmbianceAlarme", gameObject);
 
 		m_pExplosifs = GameObject.FindGameObjectsWithTag("Explosif");
 		foreach(GameObject currentExplosif in m_pExplosifs)
