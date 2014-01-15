@@ -28,6 +28,6 @@ public class CAlarmRedSpot : MonoBehaviour {
 	public void DesactivateSpot()
 	{
 		m_bActive = false;
-		GameObject.Find("_Game").GetComponent<CGame>().GetSoundEngine().postEvent("Stop_AmbianceAlarme", gameObject);
+		GameObject.Find("_Game").GetComponent<CGame>().GetSoundEngine().postEvent("F", gameObject);
 	}
 }
