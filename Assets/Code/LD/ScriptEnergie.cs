@@ -16,6 +16,7 @@ public class ScriptEnergie : MonoBehaviour {
 	}
 
 	void Energize(){
-		tempsRestant = 15;
+		tempsRestant = 50;
+		Debug.Log ("Kirk : energize.");
 	}
 }

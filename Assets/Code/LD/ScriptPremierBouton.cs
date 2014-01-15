@@ -19,7 +19,7 @@ public class ScriptPremierBouton : MonoBehaviour {
 	
 	}
 
-	void Activate(){
+	void OnMachineTrigger(){
 		if(isRepaired)
 		{
 			foreach(GameObject obj in GameObject.FindGameObjectsWithTag("TrucElectriques"))

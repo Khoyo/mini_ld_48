@@ -14,7 +14,15 @@ public class ScriptRotor : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {			
+	void Update () {		
+		if(GetComponent<ScriptEnergie>().Energie)
+		{
+			foreach(Animation anim in GetComponentsInChildren<Animation>())
+			        anim.Play();
+		}
+		else
+			foreach(Animation anim in GetComponentsInChildren<Animation>())
+				anim.Stop();
 	}
 
 
