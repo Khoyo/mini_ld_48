@@ -56,9 +56,6 @@ public class CGame : MonoBehaviour
 		if(CApoilInput.Quit)
 			Application.Quit();
 
-		if(CApoilInput.DebugF10)
-			EndGame(false);
-
 		if(m_bInGame)
 		{
 			if(m_nNbReparation == 0)
@@ -92,6 +89,8 @@ public class CGame : MonoBehaviour
 		{
 			currentExplosif.GetComponent<CExplosif>().Explode();
 		}
+		m_SoundEngine.postEvent("Play_ExploFin", gameObject);
+
 	}
 
 	public CSoundEngine GetSoundEngine()

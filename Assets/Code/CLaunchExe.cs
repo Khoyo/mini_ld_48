@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System;
 
 public class CLaunchExe : MonoBehaviour {
-
+	/*
 	// Use this for initialization
 	void Start () {
 	
@@ -34,5 +34,5 @@ public class CLaunchExe : MonoBehaviour {
 				print(e);       
 			}
 		}
-	}
+	}*/
 }

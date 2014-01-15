@@ -29,6 +29,7 @@
 				<Event Id="2721379730" Name="Play_DoorClose" />
 				<Event Id="2726541816" Name="Play_DoorOver" />
 				<Event Id="885085521" Name="Play_EntreeAccel" />
+				<Event Id="1721497727" Name="Play_ExploFin" />
 				<Event Id="1143529360" Name="Play_FirstMachineRepair" />
 				<Event Id="2822502042" Name="Play_Pas" />
 				<Event Id="3800211151" Name="Play_Soudure" />
@@ -59,6 +60,10 @@
 				<File Id="480123363" Language="SFX">
 					<ShortName>DoorOver.wav</ShortName>
 					<Path>sfx\doorover_ddc98ef4.wem</Path>
+				</File>
+				<File Id="841309189" Language="SFX">
+					<ShortName>ExploFin.wav</ShortName>
+					<Path>sfx\explofin_ddc98ef4.wem</Path>
 				</File>
 				<File Id="904528983" Language="SFX">
 					<ShortName>Metal_01.wav</ShortName>
