@@ -9,7 +9,7 @@ public class CFerASouder : MonoBehaviour
 	float m_fSoudureRestante;
 	CGame m_Game;
 	bool m_bSoundLaunched;
-	bool lost;
+	bool m_bLost;
 
 	public bool WasInThisFrame = true;
 	public bool WasSolderThisFrame = true;
@@ -24,7 +24,7 @@ public class CFerASouder : MonoBehaviour
 		m_Etincelle.active = true;
 		m_bSoundLaunched = false;
 		m_Game.GetSoundEngine().setSwitch("Soudure","Aire", gameObject);
-		lost = false;
+		m_bLost = false;
 		m_fSoudureRestante = m_Game.m_fQuantiteSoudureDepart;
 	}
 	
@@ -43,10 +43,10 @@ public class CFerASouder : MonoBehaviour
 		if(CApoilInput.InputPlayer.InteractFer)
 			m_fSoudureRestante -= Time.deltaTime;
 
-		if(m_fSoudureRestante < 0 && !lost)
+		if(m_fSoudureRestante < 0 && !m_bLost)
 		{
 			m_Game.EndGame(false);
-			lost = true;
+			m_bLost = true;
 		}
 		
 	}
@@ -103,22 +103,10 @@ public class CFerASouder : MonoBehaviour
 		}
 	}
 
-<<<<<<< HEAD
 	public void Reload()
 	{
 		m_fSoudureRestante += m_Game.m_fQuantiteSoudureReload;
 		GameObject.Find("_Game").GetComponent<CGame>().GetSoundEngine().postEvent("Play_ReloadWeapon", gameObject);
 	}
 
-=======
-	public void OnCollisionStay(Collision other)
-	{
-		WasInThisFrame = true;
-		
-	}
-
-
-
->>>>>>> e71219f7e28edfc9095c767ffaeb944191aea856
-	
 }
