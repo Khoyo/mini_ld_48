@@ -22,7 +22,7 @@ public class CFerASouder : MonoBehaviour
 		m_bSoundLaunched = false;
 		m_Game.GetSoundEngine().setSwitch("Soudure","Aire", gameObject);
 		lost = false;
-		m_fSoudureRestante = m_Game.m_fReaminingSolderer;
+		m_fSoudureRestante = m_Game.m_fQuantiteSoudureDepart;
 	}
 	
 	// Update is called once per frame
@@ -53,7 +53,6 @@ public class CFerASouder : MonoBehaviour
 		m_fTimerEtincelle = m_fTimerEtincelleMax;
 		if(!m_bSoundLaunched)
 		{
-
 			m_Game.GetSoundEngine().postEvent("Play_Soudure", gameObject);
 
 			m_bSoundLaunched = true;
@@ -82,6 +81,12 @@ public class CFerASouder : MonoBehaviour
 		{
 			m_Game.GetSoundEngine().setSwitch("Soudure","OK", gameObject);
 		}
+	}
+
+	public void Reload()
+	{
+		m_fSoudureRestante += m_Game.m_fQuantiteSoudureReload;
+		GameObject.Find("_Game").GetComponent<CGame>().GetSoundEngine().postEvent("Play_ReloadWeapon", gameObject);
 	}
 
 	

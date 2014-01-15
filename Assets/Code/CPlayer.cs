@@ -176,4 +176,9 @@ public class CPlayer : MonoBehaviour
 			m_Fer.LaunchFire();	
 		}
 	}
+
+	public void ReloadWeapon()
+	{
+		m_Fer.Reload();
+	}
 }

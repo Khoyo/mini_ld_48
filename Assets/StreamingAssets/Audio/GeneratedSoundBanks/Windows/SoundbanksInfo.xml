@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" SchemaVersion="9">
 	<RootPaths>
-		<ProjectRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents />
 	<StreamedFiles />
@@ -32,6 +32,7 @@
 				<Event Id="1721497727" Name="Play_ExploFin" />
 				<Event Id="1143529360" Name="Play_FirstMachineRepair" />
 				<Event Id="2822502042" Name="Play_Pas" />
+				<Event Id="1272182777" Name="Play_ReloadWeapon" />
 				<Event Id="3800211151" Name="Play_Soudure" />
 				<Event Id="1202525026" Name="Play_TriggerSortieBureau" />
 				<Event Id="351020924" Name="Stop_AmbianceAlarme" />
@@ -132,6 +133,10 @@
 				<File Id="324252156" Language="SFX">
 					<ShortName>phrase3_2sec.wav</ShortName>
 					<Path>sfx\phrase3_2sec_ddc98ef4.wem</Path>
+				</File>
+				<File Id="363688600" Language="SFX">
+					<ShortName>SFB-arme-pompe.wav</ShortName>
+					<Path>sfx\sfb-arme-pompe_ddc98ef4.wem</Path>
 				</File>
 				<File Id="555857019" Language="SFX">
 					<ShortName>SoudureAire.wav</ShortName>
