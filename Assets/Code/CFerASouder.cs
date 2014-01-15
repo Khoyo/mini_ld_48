@@ -6,7 +6,7 @@ public class CFerASouder : MonoBehaviour
 	GameObject m_Etincelle;
 	float m_fTimerEtincelle;
 	const float m_fTimerEtincelleMax = 0.2f;
-	public float m_fSoudureRestante = 20;
+	float m_fSoudureRestante;
 	CGame m_Game;
 	bool m_bSoundLaunched;
 	bool lost;
@@ -22,6 +22,7 @@ public class CFerASouder : MonoBehaviour
 		m_bSoundLaunched = false;
 		m_Game.GetSoundEngine().setSwitch("Soudure","Aire", gameObject);
 		lost = false;
+		m_fSoudureRestante = m_Game.m_fReaminingSolderer;
 	}
 	
 	// Update is called once per frame

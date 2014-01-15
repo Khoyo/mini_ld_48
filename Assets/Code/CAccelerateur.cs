@@ -7,12 +7,13 @@ public class CAccelerateur : MonoBehaviour {
 	bool m_bLaunchEnd;
 	public GameObject m_Game;
 	
-	public float m_fLife;
+	float m_fLife;
 	bool m_bRepaired = false;
 
 	// Use this for initialization
 	void Start () {
 		m_bLaunchEnd = false;
+		m_fLife = GameObject.Find("_Game").GetComponent<CGame>().m_fTimerExplosion;
 	}
 	
 	// Update is called once per frame
