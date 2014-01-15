@@ -14,7 +14,7 @@ public class CPlayer : MonoBehaviour
 
 	Estate m_eState;
 	float m_fVelocityWalk = 15.0f;
-	float m_fVelocityRotation = 0.5f;
+	float m_fVelocityRotation = 0.2f;
 	float m_fVelocityJump = 250.0f;
 	float m_fAngleY;
 	float m_fTimerJump;
@@ -155,8 +155,8 @@ public class CPlayer : MonoBehaviour
 	
 	void MoveHead()
 	{
-		float fAngleMax = -1.5f;
-		float fAngleMin = 1.5f;
+		float fAngleMax = -4.0f;
+		float fAngleMin = 4.0f;
 		float fAngleBeforeY = m_fAngleY;
 		
 		m_fAngleY += CApoilInput.InputPlayer.MouseAngleY;

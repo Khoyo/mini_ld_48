@@ -8,7 +8,7 @@ public class CGame : MonoBehaviour
 	CSoundEngine m_SoundEngine;
 
 	GameObject[] m_pTrucAReparer;
-	GameObject[] pExplosifs;
+	GameObject[] m_pExplosifs;
 	int m_nNbReparation;
 
 	public Font m_Font;
@@ -19,6 +19,9 @@ public class CGame : MonoBehaviour
 
 	public bool m_bInGame;
 	public bool m_bWin;
+
+	public float m_fTimerExplosion = 200.0f;
+	public float m_fReaminingSolderer = 200.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -40,8 +43,8 @@ public class CGame : MonoBehaviour
 		m_SoundEngine.postEvent("Play_AmbianceLabo_01", gameObject);
 		m_SoundEngine.postEvent("Play_AmbianceAlarme", gameObject);
 
-		pExplosifs = GameObject.FindGameObjectsWithTag("Explosif");
-		foreach(GameObject currentExplosif in pExplosifs)
+		m_pExplosifs = GameObject.FindGameObjectsWithTag("Explosif");
+		foreach(GameObject currentExplosif in m_pExplosifs)
 		{
 			currentExplosif.GetComponent<CExplosif>().ArmExplosion();
 		}
