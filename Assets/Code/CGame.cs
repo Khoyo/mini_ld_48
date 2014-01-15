@@ -22,7 +22,7 @@ public class CGame : MonoBehaviour
 
 	public float m_fTimerExplosion = 200.0f;
 	public float m_fQuantiteSoudureDepart = 200.0f;
-	public float m_fQuantiteSoudureReload = 100.0f;
+	public float m_fQuantiteSoudureReload = 10.0f;
 
 	// Use this for initialization
 	void Start () 
