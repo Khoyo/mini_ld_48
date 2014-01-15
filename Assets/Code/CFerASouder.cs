@@ -11,6 +11,9 @@ public class CFerASouder : MonoBehaviour
 	bool m_bSoundLaunched;
 	bool lost;
 
+	public bool WasInThisFrame = true;
+	public bool WasSolderThisFrame = true;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -45,6 +48,23 @@ public class CFerASouder : MonoBehaviour
 			m_Game.EndGame(false);
 			lost = true;
 		}
+		
+	}
+
+	void FixedUpdate(){
+		if(!WasInThisFrame)
+		{
+				m_Game.GetSoundEngine().setSwitch("Soudure","Aire", gameObject);
+		}
+		else
+		{
+			if(WasSolderThisFrame)
+				m_Game.GetSoundEngine().setSwitch("Soudure","OK", gameObject);
+			else
+				m_Game.GetSoundEngine().setSwitch("Soudure","Erreur", gameObject);
+		}
+		WasInThisFrame = false;
+		WasSolderThisFrame = false;
 	}
 	
 	public void LaunchFire()
@@ -53,9 +73,7 @@ public class CFerASouder : MonoBehaviour
 		m_fTimerEtincelle = m_fTimerEtincelleMax;
 		if(!m_bSoundLaunched)
 		{
-
 			m_Game.GetSoundEngine().postEvent("Play_Soudure", gameObject);
-
 			m_bSoundLaunched = true;
 		}
 	}
@@ -76,13 +94,22 @@ public class CFerASouder : MonoBehaviour
 		m_bSoundLaunched = false;
 	}
 
-	public void OnTriggerEnter(Collider other)
+	public void OnTriggerStay(Collider other)
 	{
+		WasInThisFrame = true;
 		if(other.CompareTag("Fissure"))
 		{
-			m_Game.GetSoundEngine().setSwitch("Soudure","OK", gameObject);
+			WasSolderThisFrame = true;
 		}
 	}
+
+	public void OnCollisionStay(Collision other)
+	{
+		WasInThisFrame = true;
+		
+	}
+
+
 
 	
 }
