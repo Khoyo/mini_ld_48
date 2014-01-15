@@ -22,9 +22,9 @@ public class ScriptPremierBouton : MonoBehaviour {
 	void OnMachineTrigger(){
 		if(isRepaired)
 		{
-			foreach(GameObject obj in GameObject.FindGameObjectsWithTag("TrucElectriques"))
+			foreach(ScriptEnergie scr in transform.parent.GetComponentsInChildren<ScriptEnergie>())
 			{
-				obj.SendMessage("Energize");
+				scr.Energize();
 			}
 		}
 	}

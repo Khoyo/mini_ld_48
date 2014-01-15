@@ -19,7 +19,7 @@ public class ScriptPiston : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//if(m_repaired && m_Rotor.GetComponent<ScriptRotor>().m_repaired && GetComponent<ScriptEnergie>().Energie)
+		if(m_repaired && m_Rotor.GetComponent<ScriptRotor>().m_repaired && GetComponent<ScriptEnergie>().Energie)
 		{
 			activated = true;
 			animation.Play();

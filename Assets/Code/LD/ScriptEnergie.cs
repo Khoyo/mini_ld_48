@@ -4,7 +4,7 @@ using System.Collections;
 public class ScriptEnergie : MonoBehaviour {
 
 	public bool Energie;
-	float tempsRestant;
+	public float tempsRestant;
 
 	void Start(){
 		tempsRestant = 0;
@@ -15,7 +15,7 @@ public class ScriptEnergie : MonoBehaviour {
 		Energie = tempsRestant > 0;
 	}
 
-	void Energize(){
+	public void Energize(){
 		tempsRestant = 50;
 		Debug.Log ("Kirk : energize.");
 	}
