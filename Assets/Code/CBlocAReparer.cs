@@ -4,7 +4,7 @@ using System.Collections;
 public class CBlocAReparer : MonoBehaviour 
 {
 
-	bool m_isRepaired = false;
+	public bool m_isRepaired = false;
 	int repairCount;
 	public GameObject m_gameObjectToActivate;
 	
@@ -22,9 +22,13 @@ public class CBlocAReparer : MonoBehaviour
 	
 	public void Repair() 
 	{
-		if(repairCount != 0)
-			m_isRepaired = true;
-			print ("Repaired");
+		if(--repairCount != 0)
+			return;
+		m_isRepaired = true;
+		print ("Repaired");
+		if(m_gameObjectToActivate != null)
 			m_gameObjectToActivate.SendMessage("Activate");
+		else
+			Debug.Log ("Warning : Game object "+gameObject.name+" have no game object to activate");
 	}
 }

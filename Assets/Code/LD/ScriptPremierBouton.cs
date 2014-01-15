@@ -3,12 +3,6 @@ using System.Collections;
 
 public class ScriptPremierBouton : MonoBehaviour {
 
-	bool isRepaired = false;
-
-	void Repair(){
-		isRepaired = true;
-	}
-
 	// Use this for initialization
 	void Start () {
 	
@@ -20,7 +14,7 @@ public class ScriptPremierBouton : MonoBehaviour {
 	}
 
 	void OnMachineTrigger(){
-		if(isRepaired)
+		if(GetComponent<CBlocAReparer>().m_isRepaired)
 		{
 			foreach(ScriptEnergie scr in transform.parent.GetComponentsInChildren<ScriptEnergie>())
 			{
