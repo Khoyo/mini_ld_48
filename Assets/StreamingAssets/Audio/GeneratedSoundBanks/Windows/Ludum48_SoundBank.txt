@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	950483736	Play_AmbianceLabo_01			\Default Work Unit\Play_AmbianceLabo_01	
 	1143529360	Play_FirstMachineRepair			\Default Work Unit\Play_FirstMachineRepair	
 	1202525026	Play_TriggerSortieBureau			\Default Work Unit\Play_TriggerSortieBureau	
+	1272182777	Play_ReloadWeapon			\Default Work Unit\Play_ReloadWeapon	
 	1345442210	Stop_FirstMachineRepair			\Default Work Unit\Stop_FirstMachineRepair	
 	1541940136	Stop_TriggerSortieBureau			\Default Work Unit\Stop_TriggerSortieBureau	
 	1721497727	Play_ExploFin			\Default Work Unit\Play_ExploFin	
@@ -29,29 +30,30 @@ Switch	ID	Name	Switch Group			Notes
 	2473969246	Metal	PAS			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	52611267	PasLino_01	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_01		37280
-	93032367	SoudureOK	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\soudureok_c263707e.wem		\Actor-Mixer Hierarchy\Ludum Dare\Soudure\SoudureOK		179480
-	179790232	AmbianceLabo_01	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\ambiancelabo_01_6ee06457.wem		\Actor-Mixer Hierarchy\Ludum Dare\AmbianceLabo_01		9683008
-	223891515	Metal_05	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_05_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_05		25152
-	324252156	phrase3_2sec	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\phrase3_2sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\phrase3_2sec		353800
-	344518301	SoudureFausse	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\soudurefausse_0cabd240.wem		\Actor-Mixer Hierarchy\Ludum Dare\Soudure\SoudureFausse		158848
-	357934829	Metal_03	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_03		29760
-	384431800	phrase1_5sec	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\phrase1_5sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\phrase1_5sec		937040
-	478968548	Metal_08	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_08_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_08		26816
-	480123363	DoorOver	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\doorover_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\DoorOver		544832
-	555857019	SoudureAire	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\soudureaire_ec99de29.wem		\Actor-Mixer Hierarchy\Ludum Dare\Soudure\SoudureAire		615168
-	604760911	Metal_07	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_07_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_07		26688
-	645169481	PasLino_05	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_05_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_05		35396
-	691745707	DoorClose	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\doorclose_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\DoorClose		598336
-	714001099	PasLino_03	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_03		32208
-	748702434	Metal_04	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_04		25920
-	827073558	Metal_06	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_06		26176
-	840590429	PasLino_06	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_06		25792
-	841309189	ExploFin	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\explofin_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\ExploFin		2785344
-	850334438	PasLino_04	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_04		34348
-	904528983	Metal_01	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_01		31296
-	958507377	Metal_02	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_02		29248
-	966758040	Alarme01	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\alarme01_003a37d5.wem		\Actor-Mixer Hierarchy\Ludum Dare\Alarme01		1443904
-	1019139357	phrase2_3sec	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\phrase2_3sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\phrase2_3sec		527956
-	1036422983	PasLino_02	C:\Users\tim-asus\Desktop\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_02		33216
+	52611267	PasLino_01	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_01		37280
+	93032367	SoudureOK	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\soudureok_c263707e.wem		\Actor-Mixer Hierarchy\Ludum Dare\Soudure\SoudureOK		179480
+	179790232	AmbianceLabo_01	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\ambiancelabo_01_6ee06457.wem		\Actor-Mixer Hierarchy\Ludum Dare\AmbianceLabo_01		9683008
+	223891515	Metal_05	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_05_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_05		25152
+	324252156	phrase3_2sec	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\phrase3_2sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\phrase3_2sec		353800
+	344518301	SoudureFausse	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\soudurefausse_0cabd240.wem		\Actor-Mixer Hierarchy\Ludum Dare\Soudure\SoudureFausse		158848
+	357934829	Metal_03	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_03		29760
+	363688600	SFB-arme-pompe	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\sfb-arme-pompe_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\SFB-arme-pompe		110656
+	384431800	phrase1_5sec	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\phrase1_5sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\phrase1_5sec		937040
+	478968548	Metal_08	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_08_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_08		26816
+	480123363	DoorOver	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\doorover_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\DoorOver		544832
+	555857019	SoudureAire	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\soudureaire_ec99de29.wem		\Actor-Mixer Hierarchy\Ludum Dare\Soudure\SoudureAire		615168
+	604760911	Metal_07	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_07_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_07		26688
+	645169481	PasLino_05	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_05_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_05		35396
+	691745707	DoorClose	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\doorclose_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\DoorClose		598336
+	714001099	PasLino_03	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_03		32208
+	748702434	Metal_04	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_04		25920
+	827073558	Metal_06	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_06		26176
+	840590429	PasLino_06	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_06		25792
+	841309189	ExploFin	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\explofin_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\ExploFin		2785344
+	850334438	PasLino_04	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_04		34348
+	904528983	Metal_01	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_01		31296
+	958507377	Metal_02	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\metal_02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasMetal\Metal_02		29248
+	966758040	Alarme01	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\alarme01_003a37d5.wem		\Actor-Mixer Hierarchy\Ludum Dare\Alarme01		1443904
+	1019139357	phrase2_3sec	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\phrase2_3sec_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\phrase2_3sec		527956
+	1036422983	PasLino_02	C:\Users\tim-asus\Google Drive\TIM\LudumDare\Wwise_MiniLD48\Ludum Dare mini TIM\.cache\Windows\sfx\paslino_02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Ludum Dare\Pas\PasLino\PasLino_02		33216
 

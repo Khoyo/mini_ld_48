@@ -21,7 +21,8 @@ public class CGame : MonoBehaviour
 	public bool m_bWin;
 
 	public float m_fTimerExplosion = 200.0f;
-	public float m_fReaminingSolderer = 200.0f;
+	public float m_fQuantiteSoudureDepart = 200.0f;
+	public float m_fQuantiteSoudureReload = 100.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -41,7 +42,6 @@ public class CGame : MonoBehaviour
 			m_nNbReparation++;
 
 		m_SoundEngine.postEvent("Play_AmbianceLabo_01", gameObject);
-		m_SoundEngine.postEvent("Play_AmbianceAlarme", gameObject);
 
 		m_pExplosifs = GameObject.FindGameObjectsWithTag("Explosif");
 		foreach(GameObject currentExplosif in m_pExplosifs)

@@ -7,6 +7,7 @@ public class TestDlaSoudure : MonoBehaviour {
 	bool m_bactive;
 	float m_fTimerAffichage;
 	const float m_fTimerAffichageMax = 3.0f;
+	int repairCount;
 	float m_fHeightText;
 	CGame m_Game;
 
@@ -16,6 +17,7 @@ public class TestDlaSoudure : MonoBehaviour {
 		m_fTimerAffichage = 0.0f;
 		m_fHeightText = m_Game.m_fHeightText;
 		m_bactive = false;
+		repairCount = GetComponentsInChildren<CFissure>().Length;
 	}
 
 	// Update is called once per frame
@@ -26,6 +28,8 @@ public class TestDlaSoudure : MonoBehaviour {
 
 	void Repair()
 	{
+		if(--repairCount != 0)
+			return;
 		if(!m_bactive){
 			renderer.material = mactive;
 			m_bactive = true;
