@@ -13,7 +13,7 @@ public class CRecharge : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		Vector3 newPos = posInit + new Vector3(0, Mathf.Cos(Time.deltaTime), 0);
+		Vector3 newPos = posInit + new Vector3(0, Mathf.Cos(5.0f*Time.time), 0);
 		gameObject.transform.position = newPos;
 	}
 
