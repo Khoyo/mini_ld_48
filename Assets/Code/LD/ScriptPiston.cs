@@ -6,12 +6,15 @@ public class ScriptPiston : MonoBehaviour {
 	
 	public GameObject m_Rotor;
 	bool activated = false;
+	public float m_fSpeed = 1;
 
-	
+
 
 	// Use this for initialization
 	void Start () {
-
+		foreach (AnimationState state in animation) {
+			state.speed = m_fSpeed;
+		}
 	}
 	
 	// Update is called once per frame
