@@ -35,8 +35,8 @@ public class CPlayer : MonoBehaviour
 	{
 		m_fAngleY = 0.0f;
 		m_fAngleWake = 0.0f;
-		m_Fer = gameObject.transform.FindChild("MainCamera").FindChild("Fer").GetComponent<CFerASouder>();
-		m_Hand = gameObject.transform.FindChild("MainCamera").FindChild("Hand").GetComponent<CHand>();
+		m_Fer = gameObject.transform.FindChild("Head").FindChild("Fer").GetComponent<CFerASouder>();
+		m_Hand = gameObject.transform.FindChild("Head").FindChild("Hand").GetComponent<CHand>();
 		m_fTimerJump = 0.0f;
 		m_fTimerWakeUp = 0.0f;
 		m_fTimerDie = 0.0f;
@@ -166,7 +166,7 @@ public class CPlayer : MonoBehaviour
 		else if(m_fAngleY > fAngleMin)
 			m_fAngleY = fAngleMin;
 		
-		gameObject.transform.FindChild("MainCamera").RotateAroundLocal(new Vector3(1,0,0), m_fVelocityRotation * (m_fAngleY - fAngleBeforeY));
+		gameObject.transform.FindChild("Head").RotateAroundLocal(new Vector3(1,0,0), m_fVelocityRotation * (m_fAngleY - fAngleBeforeY));
 	}
 
 	void InputsPlayer()
