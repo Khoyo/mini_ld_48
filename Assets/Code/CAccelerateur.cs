@@ -38,10 +38,8 @@ public class CAccelerateur : MonoBehaviour {
 		centeredStyle.alignment = TextAnchor.UpperLeft;
 		GUI.skin.label.font = m_Game.GetComponent<CGame>().m_FontSmall; 
 
-
-
 		int nPosX = 20;
-		int nPosY = (int)(m_CGame.m_fHeight) - 100;
+		int nPosY = (int)(m_CGame.m_fHeight) - 110;
 
 		GUI.Label(new Rect( nPosX, nPosY - 20, 1000, 100),"Accelerator life : ",centeredStyle);
 
