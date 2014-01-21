@@ -43,7 +43,7 @@ public class CFirstMachine : MonoBehaviour {
 			centeredStyle.alignment = TextAnchor.UpperCenter;
 			if(m_fTimerAffichage > 0.0f)
 			{
-				GUI.skin.label.font = m_Game.m_Font; 
+				GUI.skin.label.font = m_Game.m_FontLarge; 
 				GUI.Label(new Rect( 0, m_Game.m_fHeight - m_fHeightText, m_Game.m_fWidth, m_Game.m_fHeight), "Ok it’s repaire. Now I can push the button!", centeredStyle);
 			}
 		}

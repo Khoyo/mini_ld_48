@@ -104,7 +104,7 @@ public class CFerASouder : MonoBehaviour
 
 		GUIStyle centeredStyle = GUI.skin.GetStyle("Label");
 		centeredStyle.alignment = TextAnchor.UpperLeft;
-		GUI.skin.label.font = m_Game.m_Font; 
+		GUI.skin.label.font = m_Game.m_FontLarge; 
 		GUI.Label(new Rect( nPosX + 20, nPosY + 50, 1000, 100),"/"+nNbChargeur.ToString());
 
 		float fHeightMax = 100.0f;

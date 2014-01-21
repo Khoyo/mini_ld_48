@@ -11,7 +11,8 @@ public class CGame : MonoBehaviour
 	GameObject[] m_pExplosifs;
 	int m_nNbReparation;
 
-	public Font m_Font;
+	public Font m_FontLarge;
+	public Font m_FontSmall;
 
 	public float m_fWidth = 1280;
 	public float m_fHeight = 720;
