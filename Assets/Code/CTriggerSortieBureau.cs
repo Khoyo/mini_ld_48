@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CTriggerSortieBureau : MonoBehaviour {
@@ -48,7 +48,7 @@ public class CTriggerSortieBureau : MonoBehaviour {
 		centeredStyle.alignment = TextAnchor.UpperCenter;
 		if(m_fTimerAffichage > 0.0f)
 		{
-			GUI.skin.label.font = m_Game.m_Font; 
+			GUI.skin.label.font = m_Game.m_FontLarge; 
 			GUI.Label(new Rect( 0, m_Game.m_fHeight - m_fHeightText, m_Game.m_fWidth, m_Game.m_fHeight), "Ho Shit, I gotta go to the Particle Accelerator!", centeredStyle);
 		}
 	}

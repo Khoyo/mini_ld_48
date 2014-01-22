@@ -116,7 +116,7 @@ public class CPlayer : MonoBehaviour
 		centeredStyle.alignment = TextAnchor.UpperCenter;
 		if(m_fTimerDie < m_fTimerDieMax && !m_Game.m_bWin && m_eState == Estate.e_end_win)
 		{
-			GUI.skin.label.font = m_Game.m_Font; 
+			GUI.skin.label.font = m_Game.m_FontLarge; 
 			GUI.Label(new Rect( 0, m_Game.m_fHeight - 200, m_Game.m_fWidth, m_Game.m_fHeight), "Ho Shit, I'm dead!", centeredStyle);
 
 		}
