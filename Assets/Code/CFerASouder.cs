@@ -29,7 +29,7 @@ public class CFerASouder : MonoBehaviour
 		m_bSoundLaunched = false;
 		m_Game.GetSoundEngine().setSwitch("Soudure","Aire", gameObject);
 		m_bLost = false;
-		m_fSoudureRestante = m_Game.m_fQuantiteSoudureDepart;
+		m_fSoudureRestante = m_Game.m_fQuantiteSoudureDepart-1;
 		m_nNbChargeurs = 0;
 	}
 	
@@ -99,15 +99,18 @@ public class CFerASouder : MonoBehaviour
 			m_Game.GetSoundEngine().postEvent("Play_ReloadWeapon", gameObject);
 		}
 
+		int nPosX = (int)(m_Game.m_fWidth) - 100;
+		int nPosY = (int)(m_Game.m_fHeight - m_Game.m_fHeightText)- 10;
+
 		GUIStyle centeredStyle = GUI.skin.GetStyle("Label");
 		centeredStyle.alignment = TextAnchor.UpperLeft;
-		GUI.skin.label.font = m_Game.m_Font; 
-		GUI.Label(new Rect( 20, 20, 1000, 100),"Chargeurs : "+nNbChargeur.ToString()+" Remaining solder : "+fSoudureDansLeChargeur.ToString(),centeredStyle);
+		GUI.skin.label.font = m_Game.m_FontLarge; 
+		GUI.Label(new Rect( nPosX + 20, nPosY + 50, 1000, 100),"/"+nNbChargeur.ToString());
 
 		float fHeightMax = 100.0f;
 		float fHeight = fHeightMax * fSoudureDansLeChargeur / m_Game.m_fQuantiteSoudureReload;
-		GUI.DrawTexture(new Rect(40, 200, 20, fHeightMax), m_TextureUse);
-		GUI.DrawTexture(new Rect(40, 200, 20, fHeightMax - fHeight), m_TextureFond);
+		GUI.DrawTexture(new Rect(nPosX, nPosY, 20, fHeightMax), m_TextureUse);
+		GUI.DrawTexture(new Rect(nPosX, nPosY, 20, fHeightMax - fHeight), m_TextureFond);
 	}
 
 	public void StopFire()
